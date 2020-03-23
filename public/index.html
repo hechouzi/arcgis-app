@@ -7,13 +7,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="Web site created using create-react-app" />
-  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> -->
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <link rel="stylesheet" href="http://localhost/arcgis_js_api/library/3.26/3.26/esri/css/esri.css" />
   <title>React App</title>
 </head>
+<script>
+  var dojoConfig = {
+    parseOnLoad: true,
+    //isDebug: true,
+    locale: 'zh-cn',
+    //serverIp: window.location.host + "/arcgis_js_api/library/3.16/3.16/",
+    packages: [
+      {
+        name: 'widgets',
+        location: 'http://localhost/arcgis_js_api/library/3.26/3.26/pertools'
+      }
+    ]
+  }
+</script>
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
+
   <div id="root"></div>
 </body>
 

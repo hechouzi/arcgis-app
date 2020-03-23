@@ -9,7 +9,7 @@ import thunk from 'redux-thunk';
 import reducers from './redux/reducers';
 import IndexRoute from './router/index-router';
 
-const store = createStore(reducers, compose(applyMiddleware(thunk)))
+const store = createStore(reducers, compose(applyMiddleware(thunk), window.devToolsExtension ? window.devToolsExtension() : fn => fn))
 ReactDOM.render(
   <Provider store={store}>
     <HashRouter>
