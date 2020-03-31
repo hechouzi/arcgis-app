@@ -1,0 +1,50 @@
+@import '../../css/ultils.scss';
+#arcgis-map{
+  height:100%;
+  width: 100%;
+  .tool-bar{
+    .toolbar-list{
+      position: absolute;
+      left: 0.4rem;
+      top: 0.3rem;
+      border-radius: 0.02rem;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      background-color: rgba(255,255,255,0.6);
+      height: 0.5rem;
+      li{
+        max-width: 1.2rem;
+        font-size: 0.16rem;
+        color: $default-font-color;
+        margin-left: 0.1rem;
+        cursor: pointer;
+      }
+    }
+  }
+  .layer-control{
+    position: absolute;
+    right: 0.1rem;
+    display: flex;
+    z-index: 1;
+    background-color: rgba(255,255,255,0.6);
+    ul{
+      li{
+        color: $default-font-color;
+      }
+    }
+  }
+  .layers-control{
+    position: absolute;
+    top: 1rem;
+    left: 0.1rem;
+    display: flex;
+    z-index: 1;
+    background-color: rgba(255,255,255,0.6);
+    ul{
+      li{
+        color: $default-font-color;
+      }
+    }
+  }
+}

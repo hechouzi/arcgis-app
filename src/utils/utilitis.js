@@ -1,6 +1,6 @@
 export default {
   // 小数转换百分比并且保留小数点后两位
-  PercentNum (num) {
+  PercentNum(num) {
     let Nnum = Number(num * 100).toFixed(2)
     Nnum += '%'
     return Nnum
@@ -12,7 +12,7 @@ export default {
    * @param style // 获取的样式
    * @return {*}
    */
-  getStyle (obj, style) {
+  getStyle(obj, style) {
     return obj.currentStyle ? obj.currentStyle[style] : getComputedStyle(obj, false)[style]
   },
 
@@ -22,7 +22,7 @@ export default {
    * @param object2
    * @return {boolean}
    */
-  ObjectEquals (object1, object2) {
+  ObjectEquals(object1, object2) {
     for (let propName in object1) {
       if (object1.hasOwnProperty(propName) !== object2.hasOwnProperty(propName)) {
         return false
@@ -55,7 +55,7 @@ export default {
    * @param arry2
    * @return {boolean}
    */
-  ArrayEquals (arry1, arry2) {
+  ArrayEquals(arry1, arry2) {
     if (!arry2) {
       return false
     }
@@ -77,7 +77,7 @@ export default {
    * @param obj
    * @return {boolean}
    */
-  isEmpty (obj) {
+  isEmpty(obj) {
     return Object.keys(obj).length === 0 && obj.constructor === Object
   },
 
@@ -86,7 +86,7 @@ export default {
    * @param test
    * @param recurse
    */
-  deleteEmptyString (test, recurse) {
+  deleteEmptyString(test, recurse) {
     for (let i in test) {
       if (test[i] === '') {
         delete test[i]
@@ -101,7 +101,7 @@ export default {
    * @param test
    * @param recurse
    */
-  deleteEmptyObject (test, recurse) {
+  deleteEmptyObject(test, recurse) {
     for (let i in test) {
       if (this.isEmpty(test[i])) {
         delete test[i]
@@ -116,9 +116,9 @@ export default {
    * @param obj
    * @return {*}
    */
-  removeEmpty (obj) {
+  removeEmpty(obj) {
     Object.keys(obj).forEach(function (key) {
-      ;(obj[key] && typeof obj[key] === 'object' && this.removeEmpty(obj[key])) ||
+      ; (obj[key] && typeof obj[key] === 'object' && this.removeEmpty(obj[key])) ||
         ((obj[key] === undefined || obj[key] === null || obj[key] === '') && delete obj[key])
     })
     return obj
@@ -129,7 +129,7 @@ export default {
    * @param obj 对象
    * @param keys 键值数据
    */
-  objectExtractprops (obj, keys) {
+  objectExtractprops(obj, keys) {
     return keys.reduce((result, key) => {
       if (obj.hasOwnProperty(key)) {
         result[key] = obj[key]
@@ -142,7 +142,7 @@ export default {
    * 深度拷贝
    * @param {*} obj
    */
-  deepCloneObject (obj) {
+  deepCloneObject(obj) {
     let objClone = Array.isArray(obj) ? [] : {}
     if (obj && typeof obj === 'object') {
       for (let key in obj) {
@@ -165,7 +165,7 @@ export default {
    * @param obj
    * @returns {*}
    */
-  jsonToFormData (obj) {
+  jsonToFormData(obj) {
     // 创建表单对象
     let formData = new FormData()
     if (obj) {
@@ -182,7 +182,7 @@ export default {
    * @param {*} arr 数组对象
    * @param {*} key 判断的键
    */
-  extractArrayData (data, key) {
+  extractArrayData(data, key) {
     let c = []
     let d = {}
     data.forEach(element => {
@@ -206,7 +206,7 @@ export default {
    * 图片预览
    * @param {*} file
    */
-  previewImage (file, domId) {
+  previewImage(file, domId) {
     var MAXWIDTH = 260
     var MAXHEIGHT = 180
     var dom = domId || 'preview'
@@ -260,7 +260,7 @@ export default {
    * @param {*} height
    */
 
-  clacImgZoomParam (maxWidth, maxHeight, width, height) {
+  clacImgZoomParam(maxWidth, maxHeight, width, height) {
     var param = { top: 0, left: 0, width: width, height: height }
     if (width > maxWidth || height > maxHeight) {
       let rateWidth = width / maxWidth
@@ -284,7 +284,7 @@ export default {
    * @param {*} arr1
    * @param {*} arr2
    */
-  arrUnion (arr1, arr2) {
+  arrUnion(arr1, arr2) {
     return Array.from(new Set([...arr1, ...arr2]))
   },
 
@@ -293,7 +293,7 @@ export default {
    * @param {*} arr1
    * @param {*} arr2
    */
-  arrIntersection (arr1, arr2) {
+  arrIntersection(arr1, arr2) {
     return Array.from(new Set([...arr1].filter(x => new Set(arr2).has(x))))
   },
 
@@ -302,7 +302,7 @@ export default {
    * @param {*} arr1
    * @param {*} arr2
    */
-  arrDifference (arr1, arr2) {
+  arrDifference(arr1, arr2) {
     return Array.from(new Set([...arr1].filter(x => !new Set(arr2).has(x))))
   },
 
@@ -310,7 +310,7 @@ export default {
    * 多维数组递归降维
    * @param {*} arr
    */
-  arrSteamroller (arr) {
+  arrSteamroller(arr) {
     var newArr = []
 
     // for (var i = 0; i < arr.length; i++) {
@@ -335,7 +335,7 @@ export default {
    * 统计数组各要素的个数
    * @param {*} arr
    */
-  arrItemCount (arr) {
+  arrItemCount(arr) {
     return arr.reduce(function (prev, next) {
       prev[next] = prev[next] + 1 || 1
       return prev
@@ -347,7 +347,7 @@ export default {
    * @param {*} arr 排序的数组对象
    * @param {*} key 排序的键
    */
-  arrObjItemSort (arr, key) {
+  arrObjItemSort(arr, key) {
     arr.sort(function (a, b) {
       return b[key] - a[key]
     })
@@ -357,7 +357,7 @@ export default {
    * @param {*} arr 排序的数组对象
    * @param {*} element 排序的键
    */
-  arrRemoveElement (arr, element) {
+  arrRemoveElement(arr, element) {
     arr.splice(arr.findIndex(item => item === element), 1)
     return arr
   },
@@ -366,7 +366,7 @@ export default {
    * @param {*} arr 去重的数组对象
    * @param {*} key 去重的键
    */
-  arrObjKeyUnique (arr, key) {
+  arrObjKeyUnique(arr, key) {
     const res = new Map()
     return arr.filter(a => !res.has(a[key]) && res.set(a[key], 1))
   },
@@ -381,7 +381,7 @@ export default {
    * @param {*} date new Date()对象
    * @param {*} fmt yyyy-MM-dd hh:mm:ss
    */
-  dateFormat (date, fmt) {
+  dateFormat(date, fmt) {
     var o = {
       'M+': date.getMonth() + 1, // 月份
       'd+': date.getDate(), // 日
@@ -410,7 +410,7 @@ export default {
    * @param {*} day 前几天
    * @param {*} fmt yyyy-MM-dd hh:mm:ss
    */
-  getPreDate (date, day, fmt) {
+  getPreDate(date, day, fmt) {
     let mydate = new Date()
     let predate = this.dataFormat(new Date(mydate.getTime() - Number(day) * 60 * 60 * 1000), fmt)
     return predate
@@ -421,7 +421,7 @@ export default {
    * @param {*} str 提示文字
    * @param {*} type 提示类型
    */
-  toast (message, str, type) {
+  toast(message, str, type) {
     if (str !== '') {
       message.destroy()
       message.config({
@@ -453,7 +453,7 @@ export default {
    * @param {*} duration 持续时间
    * @param {*} onClose 关闭后的回调函数
    */
-  loading (message, str, duration, onClose) {
+  loading(message, str, duration, onClose) {
     if (str !== '') {
       message.destroy()
       message.config({
@@ -467,7 +467,7 @@ export default {
    * 默认点击dom事件
    * @param {*} dom 需要点击的节点
    */
-  imitateClick (dom) {
+  imitateClick(dom) {
     if (dom) {
       let e = document.createEvent('MouseEvents')
       e.initEvent('click', true, true)
@@ -482,7 +482,7 @@ export default {
    * @param {*} dataRow 数据的行数
    * @param {*} showRow 展示的行数
    */
-  animation (animation, slider, dataRow, showRow) {
+  animation(animation, slider, dataRow, showRow) {
     const H = parseFloat(this.getStyle(slider, 'height'))
     const child = slider.querySelector('tr')
     const h = parseFloat(this.getStyle(child, 'height'))
@@ -529,5 +529,24 @@ export default {
         }
       }
     }, 5000)
+  },
+
+  /**
+ * 获取元素父级元素
+ * @param el // 当前对象
+ * @param parentSelector // 父级对象
+ * @return {*}
+ */
+  getParents(el, parentSelector /* optional */) {
+    if (parentSelector === undefined) {
+      parentSelector = "";
+    }
+
+    var p = el.parentNode;
+    while (p.className.indexOf(parentSelector) === -1) {
+      p = p.parentNode;
+      if (p.tagName === "HTML") return;
+    }
+    return p;
   }
 }

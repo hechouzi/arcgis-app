@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { initArcgisMap } from '../../redux/arcgisReducer/arcgis_map_redux'
-import './arcgis_map.css'
+import './arcgis_map.scss'
+import ToolBar from './toobar';
+import LayerControl from './layerControl';
+import LayersControl from './layersControl';
 
 @connect(
   state => ({
@@ -17,7 +20,9 @@ class ArcgisMap extends Component {
   render() {
     return (
       <div id='arcgis-map'>
-
+        <ToolBar />
+        <LayerControl />
+        <LayersControl />
       </div>
     )
   }

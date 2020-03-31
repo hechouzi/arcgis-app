@@ -1499,7 +1499,7 @@ export default class ArcgisApp {
           ' 测 量 长 度 ： <strong>' + parseInt(String(result.result.lengths[0])) + '</strong>千米'
         )
         _this.popup.show(CurPos)
-        // popup.style.display="block"
+        // popup.style.display = "block"
       }
     }
 

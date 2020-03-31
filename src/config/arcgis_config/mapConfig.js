@@ -5,8 +5,8 @@ export const tdtConfigInfo = {
   roadLayer: 'http://localhost/imgS/tdt/map/${level}/${row}/${row}_${col}.png', // 交通图
   stLayer: 'http://localhost/imgS/tdt/img/${level}/${row}/${row}_${col}.png', // 影像图
   labelLayer: 'http://localhost/imgS/tdt/tit/${level}/${row}/${row}_${col}.png', // 影像标注
-  // geometryServer:
-  //   'http://192.168.1.182:6080/arcgis/rest/services/Utilities/Geometry/GeometryServer', // 测量服务
+  geometryServer:
+    'http://192.168.1.182:6080/arcgis/rest/services/Utilities/Geometry/GeometryServer', // 测量服务
 
   tileInfo: {
     rows: 256,

@@ -8,13 +8,15 @@ const initState = {
   arcgisViewer: {}
 }
 export function arcgisMapReducer(state = initState, action) {
-  console.log(state);
   console.log(action);
   switch (action.type) {
     case ARCGIS_MAP:
-      return Object.assign({}, state, {
-        arcgisViewer: action.data
-      })
+      return {
+        ...state, arcgisViewer: action.data
+      }
+    // return Object.assign({}, state, {
+    //   arcgisViewer: action.data
+    // })
     default:
       return state
   }

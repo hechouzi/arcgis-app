@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ProdCfg>
+  <Plugin PluginName="AOD_H8">
+    <ProdDesp>AOD_H8</ProdDesp>
+    <ReMaps Unit="" FillValue="-9999">
+      <ReMap id="1" MinV="0" MaxV="0.025" ReV="1" Color="0,168,230" Label="清洁" />
+      <ReMap id="2" MinV="0.025" MaxV="0.05" ReV="2" Color="81,181,214" Label="清洁" />
+      <ReMap id="3" MinV="0.05" MaxV="0.075" ReV="3" Color="122,194,196" Label="清洁" />
+      <ReMap id="4" MinV="0.075" MaxV="0.10" ReV="4" Color="157,207,178" Label="清洁" />
+      <ReMap id="5" MinV="0.10" MaxV="0.125" ReV="5" Color="186,219,160" Label="较清洁" />
+      <ReMap id="6" MinV="0.125" MaxV="0.15" ReV="6" Color="216,235,141" Label="较清洁" />
+      <ReMap id="7" MinV="0.15" MaxV="0.175" ReV="7" Color="246,250,122" Label="较清洁" />
+      <ReMap id="8" MinV="0.175" MaxV="0.2" ReV="8" Color="255,248,117" Label="较清洁" />
+      <ReMap id="9" MinV="0.2" MaxV="0.225" ReV="9" Color="255,241,120" Label="轻度浑浊" />
+      <ReMap id="10" MinV="0.225" MaxV="0.25" ReV="10" Color="255,235,122" Label="轻度浑浊" />
+      <ReMap id="11" MinV="0.25" MaxV="0.275" ReV="11" Color="255,226,122" Label="轻度浑浊" />
+      <ReMap id="12" MinV="0.275" MaxV="0.3" ReV="12" Color="255,220,125" Label="轻度浑浊" />
+      <ReMap id="13" MinV="0.3" MaxV="0.325" ReV="13" Color="255,215,128" Label="中度浑浊" />
+      <ReMap id="14" MinV="0.325" MaxV="0.35" ReV="14" Color="252,202,121" Label="中度浑浊" />
+      <ReMap id="15" MinV="0.35" MaxV="0.375" ReV="15" Color="242,170,97" Label="中度浑浊" />
+      <ReMap id="16" MinV="0.375" MaxV="0.4" ReV="16" Color="230,138,73" Label="中度浑浊" />
+      <ReMap id="17" MinV="0.4" MaxV="0.425" ReV="17" Color="217,108,54" Label="重度浑浊" />
+      <ReMap id="18" MinV="0.425" MaxV="0.45" ReV="18" Color="201,80,36" Label="重度浑浊" />
+      <ReMap id="19" MinV="0.45" MaxV="0.475" ReV="19" Color="186,47,19" Label="重度浑浊" />
+      <ReMap id="20" MinV="0.475" MaxV="1.01" ReV="20" Color="168,9,3" Label="重度浑浊" />
+    </ReMaps>
+  </Plugin> 
+  <Plugin PluginName="LST_H8">
+    <ProdDesp>LST_H8</ProdDesp>
+    <ReMaps Unit="" FillValue="-9999">
+      <ReMap id="1" MinV="-40" MaxV="15" ReV="1" Color="56,112,255" Label=">15℃" />
+      <ReMap id="2" MinV="15" MaxV="20" ReV="2" Color="43,213,255" Label=">15℃" />
+      <ReMap id="3" MinV="20" MaxV="25" ReV="3" Color="110,194,91" Label=">20℃" />
+      <ReMap id="4" MinV="25" MaxV="30" ReV="4" Color="178,209,0" Label=">25℃" />
+      <ReMap id="5" MinV="30" MaxV="35" ReV="5" Color="243,247,0" Label=">30℃" />
+      <ReMap id="6" MinV="35" MaxV="40" ReV="6" Color="255,94,0" Label=">35℃" />
+      <ReMap id="7" MinV="40" MaxV="80" ReV="7" Color="237,0,0" Label=">40℃" />
+    </ReMaps>
+  </Plugin> 
+	<Plugin PluginName="DVI_MODIS_NPP_GF_HJ">
+		<ProdDesp>差值植被指数</ProdDesp>
+		<ReMaps Unit="" FillValue="-9999">
+			<ReMap id="0" MinV="-9999" MaxV="0" ReV="0" Color="225, 225,225" Label="云" />
+			<ReMap id="1" MinV="0" MaxV="0.02" ReV="1" Color="137,112,68" Label="0.02" />
+			<ReMap id="2" MinV="0.02" MaxV="0.04" ReV="2" Color="137,68,68" Label="0.04" />
+			<ReMap id="3" MinV="0.04" MaxV="0.06" ReV="3" Color="168,112,0" Label="0.06" />
+			<ReMap id="4" MinV="0.06" MaxV="0.08" ReV="4" Color="230,230,0" Label="0.08" />
+			<ReMap id="5" MinV="0.08" MaxV="0.10" ReV="5" Color="152,181,37" Label="0.10" />
+			<ReMap id="6" MinV="0.10" MaxV="0.12" ReV="6" Color="113,166,32" Label="0.12" />
+			<ReMap id="7" MinV="0.12" MaxV="0.14" ReV="7" Color="79,151,0" Label="0.14" />
+			<ReMap id="8" MinV="0.14" MaxV="0.16" ReV="8" Color="41,139,4" Label="0.16" />
+			<ReMap id="9" MinV="0.16" MaxV="0.18" ReV="9" Color="12,108,0" Label="0.18" />
+			<ReMap id="10" MinV="0.18" MaxV="0.20" ReV="10" Color="0,53,7" Label="0.20" />
+		</ReMaps>
+	</Plugin>
+</ProdCfg>
